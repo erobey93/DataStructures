@@ -34,7 +34,6 @@ Exception::Exception(Exception&& move) noexcept
 {
 	if (this != &move)
 	{
-		//std::move(move);
 		m_msg = move.m_msg; 
 	}
 }
@@ -43,7 +42,6 @@ Exception& Exception::operator = (const Exception& copy) noexcept
 {
 	if (this != &copy)
 	{
-		//Exception::Exception(copy);
 		m_msg = copy.m_msg;
 		
 	}
@@ -55,7 +53,6 @@ Exception& Exception::operator = (Exception&& copy) noexcept
 {
 	if (this != &copy)
 	{
-		//Exception::Exception(copy);
 		m_msg = copy.m_msg;
 	}
 	return *this;
